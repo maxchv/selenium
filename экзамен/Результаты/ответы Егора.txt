@@ -1,0 +1,71 @@
+Экзамен по дисциплине: Тестирование ПО
+Группа: СПУ 14в-1
+Дата: 21.04.2016
+Студент: Грушко Егор Александрович
+
+1.
+Вопрос:
+17. Selenium IDE.  Основные возможности. 
+Ответ:
+Плагин к браузеру Firefox.
+Может записывать действия пользователя, воспроизводить их, а так же генерировать код для WebDriver или Selenium RC.
+Может использоваться как самостоятельное средство для людей не владеющих программированием, но в таком случае позволяет писать только простые, линейные тесты. 
+
+2.
+Вопрос:
+6.	Что такое системное тестирование
+Ответ:
+Основной задачей системного тестирования является проверка как функциональных, так и не функциональных требований в системе в целом. 
+При этом выявляются дефекты, такие как неверное использование ресурсов системы, ввод некоректных пользовательских данных, несовместимость с окружением, непредусмотренные сценарии использовани и т.д. 
+Для минимизации рисков, связанных с особенностями поведения в системы в той или иной среде, во время тестирования рекомендуется использовать окружение максимально приближенное к тому, на которое будет установлен продукт после выдачи. 
+
+3.
+Вопрос:
+16.	Тестирование доступности
+Ответ:
+Тестирование удобства использования, а так же возможности работы людям с ограниченными возможностями.
+Конечной целью является повышение удобства и лёгкости пользования продуктом.
+
+[TestClass]
+public class MyStatAuthTest
+{
+	IWebDriver firefox;
+	IWebDriver chrome;
+
+	[TestMethod]
+	public void StartUpTest()
+	{
+		firefox = new FirefoxDriver();
+		chrome = new ChromeDriver();
+		MyStatAuth(firefox);
+		MyStatAuth(chrome);
+	}
+
+	public void MyStatAuth(IWebDriver browser)
+	{
+		browser.Navigate().GoToUrl("http://mystat.itstep.org/");
+
+		SelectElement citySelect = new SelectElement(browser.FindElement(By.Id("city")));
+		IWebElement loginInput = browser.FindElement(By.Id("loginform-username"));
+		IWebElement passwordInput = browser.FindElement(By.Id("loginform-password"));
+
+		citySelect.SelectByText("Днепропетровск");
+		loginInput.SendKeys("***");
+		passwordInput.SendKeys("***");
+		passwordInput.SendKeys(Keys.Enter);
+
+		Thread.Sleep(2000);
+
+		Assert.AreEqual("http://mystat.itstep.org/index", browser.Url);
+		browser.FindElement(By.CssSelector("a.font_opensans:nth-child(4)")).Click();
+		Thread.Sleep(1000);
+		Assert.AreEqual("http://mystat.itstep.org/", browser.Url);
+	}
+
+	[TestCleanup]
+	public void CleanUp()
+	{
+		firefox.Quit();
+		chrome.Quit();
+	}
+}
