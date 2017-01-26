@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+  <script type="text/javascript">
+    function output(resultText){
+      document.getElementById('output').childNodes[0].nodeValue=resultText;
+    }
+
+    function show_confirm(){
+      var confirmation=confirm("Выберите вариант.");
+      if (confirmation==true){
+        output("Подтверждено.");
+      }
+      else{
+        output("Не подтверждено!");
+      }
+    }
+
+    function show_alert(){
+      alert("А я модальное!");
+      output("Диалоговое окно закрыто.");
+    }
+    function show_prompt(){
+      var response = prompt("Название лучшего инструмент контроля качества для веб?","Selenium");
+      output(response);
+    }
+    function open_window(windowName){
+      window.open("newWindow.html",windowName);
+    }
+    </script>
+</head>
+<body>
+
+  <input type="button" id="btnConfirm" onclick="show_confirm()" value="Показать диалог подтверждения" />
+  <input type="button" id="btnAlert" onclick="show_alert()" value="Показать оповещение" />
+  <input type="button" id="btnPrompt" onclick="show_prompt()" value="Показать диалог запроса" />
+  <a href="newWindow.html" id="lnkNewWindow" target="_blank">Ссылка на новое окно</a>
+  <input type="button" id="btnNewNamelessWindow" onclick="open_window()" value="Открыть безымянное окно" />
+  <input type="button" id="btnNewNamedWindow" onclick="open_window('Михаил')" value="Открыть именованное окно" />
+
+  <br />
+  <span id="output">
+  </span>
+</body>
+</html>

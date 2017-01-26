@@ -1,1 +1,2 @@
 http://toolsqa.com/selenium-tutorial/
+https://github.com/previousdeveloper/Selenium-best-practices
