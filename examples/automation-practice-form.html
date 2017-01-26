@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Demo Form for practicing Selenium Automation</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Practice Automation Form</h1> </header>
+    <div id="content" class="content" role="main">
+        <form class="form-horizontal">
+            <fieldset>
+                <!-- Form Name -->
+                <p></p>
+                <legend><strong>PERSONAL INFORMATION</strong></legend>
+                <p>
+                    <!-- Text input-->
+                </p>
+                <div class="control-group">
+                    <a title="Automation Practice Form" href="http://www.seleniumhq.org/"> <strong>Partial Link Test</strong></a>
+                    <a title="Automation Practice Table" href="http://www.seleniumhq.org/"> <strong>Link Test</strong></a>
+                    <br/> <strong>First name:</strong>
+                    <input name="firstname" type="text"> <strong>Last name:</strong>
+                    <input name="lastname" type="text"> </div>
+                <p>
+                    <!-- Multiple Radios -->
+                </p>
+                <div class="control-group"><strong><label>Sex</label></strong>
+                    <input id="sex-0" name="sex" type="radio" value="Male">&nbsp; Male&nbsp;&nbsp;&nbsp;
+                    <input id="sex-1" name="sex" type="radio" value="Female">
+                    <label class="radio" for="sex-1"> Female </label>
+                </div>
+                <p>
+                    <!-- Multiple Radios (inline) -->
+                </p>
+                <div class="control-group"><strong><label class="control-label" for="exp">Years of Experience</label></strong>
+                    <input id="exp-0" name="exp" type="radio" value="1">1&nbsp;&nbsp;&nbsp;
+                    <input id="exp-1" name="exp" type="radio" value="2">2&nbsp;&nbsp;&nbsp;
+                    <input id="exp-2" name="exp" type="radio" value="3">3 &nbsp;&nbsp;
+                    <input id="exp-3" name="exp" type="radio" value="4">4 &nbsp;&nbsp;
+                    <input id="exp-4" name="exp" type="radio" value="5">5 &nbsp;&nbsp;
+                    <input id="exp-5" name="exp" type="radio" value="6">6 &nbsp;&nbsp;
+                    <input id="exp-6" name="exp" type="radio" value="7">
+                    <label class="radio inline" for="exp-6">7 </label>
+                </div>
+                <p>Date:
+                    <input id="datepicker" type="text">
+                    <!-- Multiple Checkboxes -->
+                </p>
+                <div class="control-group"><strong><label class="control-label" for="profession">Profession</label></strong>
+                    <input id="profession-0" name="profession" type="checkbox" value="Manual Tester"> Manual Tester&nbsp;&nbsp;&nbsp;
+                    <input id="profession-1" name="profession" type="checkbox" value="Automation Tester">
+                    <label class="checkbox" for="profession-1"> Automation Tester </label>
+                </div>
+                <p>
+                    <!-- File Button -->
+                </p>
+                <div class="control-group"><strong><label class="control-label" for="photo">Profile Picture</label></strong>
+                    <input id="photo" class="input-file" name="photo" type="file"> </div>
+                <p>
+                    <!-- Multiple Checkboxes (inline) -->
+                </p>
+                <div class="control-group"></div>
+                <div class="control-group"><strong>Download Framework</strong></div>
+                <div class="control-group"><a href="http://toolsqa.wpengine.com/wp-content/uploads/2014/04/OnlineStore.zip">Selenium Automation Hybrid Framework</a></div>
+                <div class="control-group"><a href="http://toolsqa.com/wp-content/uploads/2016/09/Test-File-to-Download.xlsx">Test File to Download</a></div>
+                <div class="control-group"></div>
+                <div class="control-group"><strong><label>Automation Tool</label></strong>
+                    <input id="tool-0" name="tool" type="checkbox" value="QTP">&nbsp; QTP
+                    <input id="tool-1" name="tool" type="checkbox" value="Selenium IDE">&nbsp; Selenium IDE
+                    <input id="tool-2" name="tool" type="checkbox" value="Selenium Webdriver">&nbsp; Selenium Webdriver</div>
+                <p>
+                    <!-- Select Basic -->
+                </p>
+                <div class="control-group">
+                    <p><strong><label>Continents</label></strong></p>
+                    <div class="controls">
+                        <select id="continents" class="input-xlarge" name="continents">
+                            <option>Asia</option>
+                            <option>Europe</option>
+                            <option>Africa</option>
+                            <option>Australia</option>
+                            <option>South America</option>
+                            <option>North America</option>
+                            <option>Antartica</option>
+                        </select>
+                    </div>
+                </div>
+                <p>
+                    <!-- Select Multiple -->
+                </p>
+                <div class="control-group">
+                    <p><strong><label>Selenium Commands</label></strong></p>
+                    <div class="controls">
+                        <select id="selenium_commands" class="input-xlarge" multiple="multiple" name="selenium_commands">
+                            <option>Browser Commands</option>
+                            <option>Navigation Commands</option>
+                            <option>Switch Commands</option>
+                            <option>Wait Commands</option>
+                            <option>WebElement Commands</option>
+                        </select>
+                    </div>
+                </div>
+                <p>
+                    <!-- Button -->
+                </p>
+                <div class="control-group">
+                    <div class="button">
+                        <button id="submit" class="btn btn-info" name="submit">Button</button>
+                    </div>
+                </div>
+            </fieldset>
+            <p>
+                <label id="NextedText" class="abc">
+                    <br> <span class="bcd">Text1</span>
+                    <br> Text2
+                    <br> </label>
+            </p>
+        </form>
+        <p>&nbsp;</p> <span class="cp-load-after-post"></span>
+        <div class="project-share-overlay allways-visible-icons"><a href="#" class="share-button entry-share h5-size">Share this page</a>
+            <div class="soc-ico">
+                <a href="http://www.facebook.com/sharer.php?u=http://toolsqa.com/automation-practice-form/&amp;t=Automation%20Practice%20Form" class="facebook" target="_blank" title="Facebook" style="visibility: visible;">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/share?text=Automation%20Practice%20Form&amp;url=http://toolsqa.com/automation-practice-form/" class="twitter" target="_blank" title="Twitter" style="visibility: visible;">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+                    </svg>
+                </a>
+                <a href="http://plus.google.com/share?url=http://toolsqa.com/automation-practice-form/&amp;title=Automation+Practice+Form" class="google" target="_blank" title="Google+" style="visibility: visible;">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#google"></use>
+                    </svg>
+                </a>
+                <a href="//pinterest.com/pin/create/button/" class="pinterest pinit-marklet" target="_blank" title="Pinterest" data-pin-config="above" data-pin-do="buttonBookmark" style="visibility: visible;">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#pinterest"></use>
+                    </svg>
+                </a>
+                <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://toolsqa.com/automation-practice-form/&amp;title=Automation+Practice+Form&amp;summary=&amp;source=TOOLSQA" class="linkedin" target="_blank" title="LinkedIn" style="visibility: visible;">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#linkedin"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

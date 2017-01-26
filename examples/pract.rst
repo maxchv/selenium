@@ -13,11 +13,11 @@ Practice Exercise
 
 #. Launch new Browser
 #. Open http://DemoQA.com website
-#. Click on Registration link using �driver.findElement(By.xpath(�.//*[@id=�menu-item-374?]/a�)).click();�
-#. Come back to Home page (Use �Back� command)
-#. Again go back to Registration page (This time use �Forward� command)
-#. Again come back to Home page (This time use �To� command)
-#. Refresh the Browser (Use �Refresh� command)
+#. Click on Registration link using “driver.findElement(By.xpath(“.//*[@id=’menu-item-374?]/a”)).click();“
+#. Come back to Home page (Use ‘Back’ command)
+#. Again go back to Registration page (This time use ‘Forward’ command)
+#. Again come back to Home page (This time use ‘To’ command)
+#. Refresh the Browser (Use ‘Refresh’ command)
 #. Close the Browser
 
 **************************
@@ -38,12 +38,12 @@ Practice Exercise 1
 #. Print Page Length on Eclipse Console.
 #. Close the Browser.
 
-Practice Exercise � 2
+Practice Exercise – 2
 =====================
 
 #. Launch a new Firefox browser.
 #. Open http://demoqa.com/frames-and-windows/
-#. Use this statement to click on a New Window button �driver.findElement(By.xpath(�.//*[@id=�tabs-1?]/div/p/a�)).click();�
+#. Use this statement to click on a New Window button “driver.findElement(By.xpath(“.//*[@id=’tabs-1?]/div/p/a”)).click();”
 #. Close the browser using close() command
 
 *******************
@@ -58,15 +58,15 @@ CheckBox & Radio Button Operations
 
 .. _CheckAndRadioOperations: http://toolsqa.wpengine.com/selenium-webdriver/checkbox-radio-button-operations/
 
-Practice Exercise
-=====================
+Практическое задание
+====================
 
-#. Launch new Browser
-#. Open �http://toolsqa.wpengine.com/automation-practice-form/�
-#. Challenge One � Select the deselected Radio button (female) for category Sex (Use IsSelected method)
-#. Challenge Two � Select the Third radio button for category �Years of Exp� (Use Id attribute to select Radio button)
-#. Challenge Three � Check the Check Box �Automation Tester� for category �Profession'( Use Value attribute to match the selection)
-#. Challenge Four � Check the Check Box �Selenium IDE� for category �Automation Tool� (Use cssSelector)
+#. Запустить браузер
+#. Открыть файл  “automation-practice-form.html“
+#. Отметить радио кнопкой пол Female для категории Sex если еще не выбрано и Male в противном случае (испольуйте метод IsSelected)
+#. Установить третюю радиокнопку для категории ‘Years of Exp’ (Используйте атрибут Id для выбора радио кнопки)
+#. Поставить флажок в чекбоксе ‘Automation Tester’ категории ‘Profession'(Используйте значение атрибута value для выбора элемента)
+#. Поставить флажок в чекбоксе ‘Selenium IDE’ категории ‘Automation Tool’ (испольуйте cssSelector)
 
 *************************************
 DropDown & Multiple Select Operations
@@ -74,25 +74,89 @@ DropDown & Multiple Select Operations
 
 .. _DropDownMultiSelect: http://toolsqa.wpengine.com/selenium-webdriver/dropdown-multiple-select-operations/
 
-Practice Exercise -1 (Drop Down Box/List)
+Практическое задание 1 (Drop Down Box/List)
 =========================================
 
-#. Launch new Browser
-#. Open �http://toolsqa.wpengine.com/automation-practice-form/�
-#. Select �Continents� Drop down ( Use Id to identify the element )
-#. Select option �Europe� (Use selectByIndex)
-#. Select option �Africa� now (Use selectByVisibleText)
-#. Print all the options for the selected drop down and select one option of your choice
-#. Close the browser
+#. Запустить браузер
+#. Открыть файл  “automation-practice-form.html“
+#. Найдите выподающий список ‘Continents’ (используйте идентификатор элемента)
+#. Выбирите опцию ‘Europe’ (используя selectByIndex)
+#. Теперь выбирите опцию ‘Africa’ (исползуя selectByVisibleText)
+#. Выведите в консоли все возможные опции для выбранного выпадающего списка
+#. Закройте браузер
 
-Practice Exercise -2 (Multiple Selection Box/List)
+Практическое задание 2 (Multiple Selection Box/List)
 ==================================================
 
+#. Запустить браузер
+#. Открыть файл  “automation-practice-form.html“
+#. Найдите элемент списка ‘Selenium Commands’ (используйте атрибут name для идентификации элемента)
+#. Выберите опцию ‘Browser Commands’  и отмените ее (исползуя selectByIndex и deselectByIndex)
+#. Выберите опцию ‘Navigation Commands’  и отмените ее (используя selectByVisibleText и deselectByVisibleText)
+#. Выведите в консоли все опции списка ‘Selenium Commands’.
+#. Отмените все опции
+#. Закройте браузер
+
+**********************************************
+Handle Dynamic WebTables in Selenium Webdriver
+**********************************************
+
+.. _Tables: http://toolsqa.com/selenium-webdriver/handle-dynamic-webtables-in-selenium-webdriver/
+
+Practice Exercise 1
+===================
+
+#. Запустить браузер
+#. Открыть файл “automation-practice-table.html”
+#. Получить ячейку таблицы со значением ‘Dubai’ и напечатать в консоли
+#. Кликнуть по ссылке ‘Detail’ в первой сткроке первой колонки
+
+Practice Exercise 2
+===================
+
+#. Запустить браузер
+#. Открыть файл “automation-practice-table.html”
+#. Получить ячейку таблицы со значением ‘Dubai’ используя динамический поиск
+#. Напечатать все значения строки ‘Clock Tower Hotel’
+
+*************
+Wait Commands
+*************
+
+Practice Exercise
+=================
+
+.. _WaitCommands: http://toolsqa.com/selenium-webdriver/wait-commands/
+
 #. Launch new Browser
-#. Open �http://toolsqa.wpengine.com/automation-practice-form/�
-#. Select �Selenium Commands� Multiple selection box ( Use Name locator to identify the element )
-#. Select option �Browser Commands�  and then deselect it (Use selectByIndex and deselectByIndex)
-#. Select option �Navigation Commands�  and then deselect it (Use selectByVisibleText and deselectByVisibleText)
-#. Print and select all the options for the selected Multiple selection list.
-#. Deselect all options
-#. Close the browser
+#. Open URL “http://toolsqa.wpengine.com/automation-practice-switch-windows/”
+#. Click on the Button “Timing Alert”
+#. Accept the Alert (Alert will take 3 second to get displayed, Use WebDriverWait to wait for it)
+
+
+***************
+Switch Commands
+***************
+
+.. _SwitchCommands: http://toolsqa.com/selenium-webdriver/switch-commands/
+
+Practice Exercise 1
+===================
+
+#. Launch new Browser
+#. Open URL “http://toolsqa.wpengine.com/automation-practice-switch-windows/”
+#. Get Window name (Use GetWindowHandle command)
+#. Click on Button “New Message Window”, it will open a Pop Up Window
+#. Get all the Windows name ( Use GetWindowHandles command)
+#. Close the Pop Up Window (Use Switch Command to shift window)
+
+Practice Exercise 2
+===================
+
+#. Launch new Browser
+#. Open URL “http://toolsqa.wpengine.com/automation-practice-switch-windows/”
+#. Click on Button “Alert Box”, it will open a Pop Up Window generated by JavaScript
+#. Switch to Alert window (Use ‘SwitchTo()Alert() command)
+#. Close the Pop Up Window (Use Accept command)
+
+
