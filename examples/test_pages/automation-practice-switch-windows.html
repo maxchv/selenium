@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+
+<div id="main" class="sidebar-none sidebar-divider-off">
+    <!-- class="sidebar-none", class="sidebar-left", class="sidebar-right" -->
+    <div class="main-gradient"></div>
+    <div class="wf-wrap">
+        <div class="wf-container-main">
+
+
+            <div id="content" class="content" role="main">
+
+
+                <h1>Automation Practice Switch Windows</h1>
+                <p>&nbsp;</p>
+                <h2>1) Browser Windows</h2>
+                <p>
+                    <button id="button1" onclick="newBrwWin()">New Browser Window</button>
+                </p>
+                <p>
+                    <button onclick="newMsgWin()">New Message Window</button>
+                </p>
+                <p>
+                    <button onclick="newBrwTab()">New Browser Tab</button>
+                    <br>
+                    <a class="sample1" name="sample"></a>This is a nested element<br>
+                    <a>Find me I have nothing in me!!</a></p>
+                <p id="0.7963536070770914">I will have random ID</p>
+                <h2>2) Java Script Alert</h2>
+                <p>
+                    <button id="alert" onclick="newAlert()">Alert Box</button>
+                </p>
+                <h2>3) Java Script Timing Alert</h2>
+                <p>
+                    <button id="timingAlert" onclick="newTimingAlert()">Timing Alert</button>
+                </p>
+                <p><span id="clock" class="timer">Seconds remaining: 10</span></p>
+                <p>
+                    <button id="colorVar" style="color: red;">Change Color</button>
+                </p>
+                <p>
+                    <button id="doubleClick" style="color: white;" ondblclick="ColorChanged()">Change Color</button>
+                </p>
+                <p>
+                    <button id="disabledElement" style="color: white;">enabled</button>
+                </p>
+                <p>
+                    <button id="invisibility" style="color: white; visibility: visible;">Visible</button>
+                </p>
+
+                <p><!-- Switch Winodw Javascript --><br>
+                    <script>// < ![CDATA[
+                    function ColorChanged() {
+                        document.getElementById("doubleClick").style.color = "orange";
+                    }
+                    // ]]&gt;</script>
+                    <br>
+                    <script>// < ![CDATA[
+                    var element = document.getElementById("random");
+                    var idVal = Math.random();
+                    element.setAttribute('id', idVal);
+                    // ]]&gt;</script>
+                    <br>
+                    <script>// < ![CDATA[
+                    var seconds = 40;
+                    var clockInterval = setInterval(secondsPassed, 1000);
+                    function secondsPassed() {
+                        document.getElementById("clock").innerHTML = "Seconds remaining: " + seconds;
+                        if (seconds == 0) {
+                            clearInterval(clockInterval);
+                            document.getElementById("clock").innerHTML = "Buzz  Buzz";
+                        }
+                        else {
+                            seconds = seconds - 1;
+                        }
+                    }
+                    // ]]&gt;</script>
+                    <br>
+                    <script>// < ![CDATA[
+                    function newBrwWin() {
+                        window.open("http://itstep.dp.ua", "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=500, left=500, width=400, height=400");
+                    }
+                    // ]]&gt;</script>
+                    <br>
+                    <script>// < ![CDATA[
+                    function newMsgWin() {
+                        var myWindow = window.open("", "MsgWindow", "width=500,height=200");
+                        myWindow.document.write("Knowledge increases by sharing but not by saving. Please share this website with your friends and in your organization.");
+                    }
+                    // ]]&gt;</script>
+                    <br>
+                    <script>// < ![CDATA[
+                    function newBrwTab() {
+                        window.open("http://itstep.dp.ua");
+                    }
+                    // ]]&gt;</script>
+                    <br>
+                    <script>// < ![CDATA[
+                    function newTimingAlert() {
+                        setTimeout(function () {
+                            alert("Knowledge increases by sharing but not by saving. Please share this website with your friends and in your organization.")
+                        }, 3000);
+                    }
+                    // ]]&gt;</script>
+                    <br>
+                    <script>// < ![CDATA[
+                    function newAlert() {
+                        alert("Knowledge increases by sharing but not by saving. Please share this website with your friends and in your organization.");
+                    }
+                    // ]]&gt;</script>
+                    <br>
+                    <script>// < ![CDATA[
+                    var timer = setInterval(delayLoadedElement, 10000);
+                    var counter1 = 0;
+                    function delayLoadedElement() {
+                        var mydiv = document.getElementById("content");
+                        var newElement = document.createElement('a');
+                        newElement.setAttribute('href', "http://itstep.dp.ua");
+                        newElement.setAttribute('id', "target");
+                        newElement.innerHTML = "New Element" + counter1;
+                        mydiv.appendChild(newElement);
+                        if (counter1 > 5) {
+                            clearInterval(timer);
+                        }
+                        counter1 = counter1 + 1;
+                    }
+                    // ]]&gt;</script>
+                    <br>
+                    <script>// < ![CDATA[
+                    var timer = setInterval(ColorChange, 5000);
+                    function ColorChange() {
+                        document.getElementById("colorVar").style.color = "red";
+                        clearInterval(timer);
+                    }
+                    // ]]&gt;</script>
+                    <br>
+                    <!-- Switch Winodw Javascript --></p>
+                <p><!-- Switch Winodw Javascript --></p>
+                <p>
+                    <script>
+                        var enabledTimer = setInterval(enableElement, 10000);
+                        function enableElement() {
+                            document.getElementById("disabledElement").disabled = false;
+                            document.getElementById("disabledElement").innerHTML = "enabled";
+                            clearInterval(enabledTimer);
+                        }</script>
+                </p>
+                <p>
+                    <script>
+                        var visibilityTimer = setInterval(visibleElement, 10000);
+                        function visibleElement() {
+                            document.getElementById("invisibility").style.visibility = "visible";
+                            clearInterval(visibilityTimer);
+                        }</script>
+                </p>
+                <p>
+                    <script>
+                        var deattachTimer = setInterval(deattachElement, 10000);
+                        function deattachElement() {
+                            var parent = document.getElementById("content");
+                            var child = document.getElementById("Deattach");
+                            parent.removeChild(child);
+                            clearInterval(visibilityTimer);
+                        }</script>
+                </p>
+                <p>
+                    <script>
+                        var titleTime = setInterval(changeTitle, 10000);
+                        function changeTitle() {
+                            document.title = "A new title is here";
+                            clearInterval(visibilityTimer);
+                        }</script>
+                </p>
+
+        </div><!-- .wf-container -->
+    </div><!-- .wf-wrap -->
+</div>
+</body>
+</html>

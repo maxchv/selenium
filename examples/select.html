@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select one and multiple</title>
+    <style>
+        div[class^=example] {
+            margin: 10px;
+        }
+
+        label {
+            font-size: 1.5em;
+            display: block;
+        }
+
+        select {
+            width: 200px;
+            font-size: 1em;
+            vertical-align: top;
+            margin-left: 20px;
+        }
+
+        .col + .col {
+            margin-left: 50px;
+        }
+
+        output {
+            font-size: 1.5em;
+            display: block;
+        }
+
+        .col {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<h2>Select one</h2>
+<div class="example1">
+    <form>
+        <label>
+            Your choice:
+            <select id="auto" onchange="out1.value='value:' + this.value">
+                <option value="none" name="none">-</option>
+                <option value="volvo" name="volvo">Volvo</option>
+                <option value="saab" name="saab">Saab</option>
+                <option value="mercedes" name="mercedes">Mercedes</option>
+                <option value="audi" name="audi">Audi</option>
+            </select>
+        </label>
+        <output id="out1"></output>
+    </form>
+</div>
+<h2>Multiple select</h2>
+<div class="example2">
+    <div class="col">
+        <label>
+            Pizza additives
+            <select id="additives" multiple size="10">
+                <option value="Cheese" name="cheese">Cheese</option>
+                <option value="Olives" name="olives">Olives</option>
+                <option value="Pepperoni" name="pepperoni">Pepperoni</option>
+                <option value="Anchovies" name="anchovies">Anchovies</option>
+                <option value="Mushrooms" name="mushrooms">Mushrooms</option>
+                <option value="Green Pepper" name="green_pepper">Green Pepper</option>
+                <option value="Bacon" name="bacon">Bacon</option>
+                <option value="Ham" name="ham">Ham</option>
+            </select>
+        </label>
+    </div>
+    <div class="col">
+        <output>
+            <select id="out2" size="10"></select>
+        </output>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    $("#additives").change(function () {
+        $("#out2").empty();
+        $("#additives>option:selected").each(function (idx, value) {
+            console.log(value);
+            $("#out2").append($(value).clone());
+        });
+    });
+</script>
+</body>
+</html>
