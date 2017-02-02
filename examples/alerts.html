@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <title>Alerts Examples</title>
+    <meta charset="utf-8"/>
+    <style>
+        .done {
+            text-decoration: line-through;
+        }
+
+        .blue {
+            background: blue;
+            color: yellow;
+        }
+
+        button {
+            width: 100px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+
+<div id="main">
+    <header>
+
+    </header>
+    <div id="alert">
+        <button>Alert</button>
+    </div>
+    <div id="confirm">
+        <button>Confirm</button>
+    </div>
+    <div id="prompt">
+        <button>Prompt</button>
+    </div>
+    <div id="itstep">
+        <a href="http://itstep.dp.ua" target="_blank">itstep.dp.ua</a>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    $("#alert>button").click(function () {
+        alert("It is simple alert");
+        $("#alert").append("<span>+</span>");
+    });
+
+    $("#confirm>button").click(function () {
+        if (confirm("Are you happy?")) {
+            $("#confirm").append("<span>+</span>");
+        } else {
+            $("#confirm").append("<span>-</span>");
+        }
+    });
+    $("#prompt>button").click(function () {
+        let age = prompt("How old are you?");
+        $("#prompt").append("<span>" + age + "</span>");
+    });
+</script>
+</body>
+</html>

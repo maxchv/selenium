@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <title>Waits Examples</title>
+    <meta charset="utf-8"/>
+    <style>
+        .done {
+            text-decoration: line-through;
+        }
+        .blue {
+            background: blue;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+
+<div id="main">
+    <header>
+
+    </header>
+    <ul>
+        <li>Some header will be present after several seconds</li>
+        <li>After alert will showed</li>
+        <li>After background this page will be blue and color text - yellow</li>
+    </ul>
+    <time id="time">0</time>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        setTimeout(function () {
+            $("#main>header").append("<h1>Hello selenium</h1>");
+            $("li:first").addClass("done");
+            setTimeout(function () {
+                alert("Test it");
+                $("li:nth-child(2)").addClass("done");
+                setTimeout(function () {
+                    $("body").addClass("blue");
+                    $("li:nth-child(3)").addClass("done");
+                    clearInterval(timer);
+                }, Math.random() * 10000)
+            }, Math.random() * 10000);
+        }, Math.random() * 10000);
+        var time = 0;
+        var timer = setInterval(function () {
+            $("time").empty();
+            $("time").append(++time);
+        },100);
+    });
+</script>
+</body>
+</html>

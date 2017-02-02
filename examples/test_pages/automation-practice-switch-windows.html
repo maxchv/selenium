@@ -41,7 +41,15 @@
                 </p>
                 <p><span id="clock" class="timer">Seconds remaining: 10</span></p>
                 <p>
-                    <button id="colorVar" style="color: red;">Change Color</button>
+                    <button id="colorVar" style="color: red;" onclick="changeColor(this)">Change Color</button>
+                    <script>
+                        function changeColor(el)  {
+                            var self = el;
+                            setInterval(function () {
+                                self.style.color = "white";
+                            }, 2500);
+                        }
+                    </script>
                 </p>
                 <p>
                     <button id="doubleClick" style="color: white;" ondblclick="ColorChanged()">Change Color</button>
