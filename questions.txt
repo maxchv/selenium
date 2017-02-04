@@ -1,0 +1,661 @@
+Ques 4) What are different types of locators ?
+
+Ans- There are 8 types of locators and all are the static methods of the By class.
+
+By.id(), By.name(), By.tagName(), By.className(), By.linkText(), By.partialLinkText(), By.xpath, By.cssSelector().
+
+Ques 5) What is the difference between Assert and Verify?
+
+Ans- Assert- it is used to verify the result. If the test case fail then it will stop the execution of the test case there itself and move the control to other test case.
+
+Verify- it is also used to verify the result. If the test case fail then it will not stop the execution of that test case.
+
+Ques 6) What is the alternate way to click on login button?
+
+Ans- use submit() method but it can be used only when attribute type=submit.
+
+Ques 7) How do you verify if the checkbox/radio is checked or not ?
+
+Ans- We can use isSelected() method.
+
+Syntax –
+
+
+driver.findElement(By.xpath("xpath of the checkbox/radio button")).isSelected();
+
+driver.findElement(By.xpath("xpath of the checkbox/radio button")).isSelected();
+If the return value of this method is true then it is checked else it is not.
+
+Ques 8) How do you handle alert pop-up ?
+
+Ans- To handle alert pop-ups, we need to 1st switch control to alert pop-ups then click on ok or cancle then move control back to main page.
+
+Syntax-
+
+
+String mainPage = driver.getWindowHandle();
+
+ Alert alt = driver.switchTo().alert(); // to move control to alert popup
+
+ alt.accept(); // to click on ok.
+
+ alt.dismiss(); // to click on cancel.
+
+ //Then move the control back to main web page-
+
+ driver.switchTo().window(mainPage); > to switch back to main page.
+
+String mainPage = driver.getWindowHandle();
+ 
+ Alert alt = driver.switchTo().alert(); // to move control to alert popup
+ 
+ alt.accept(); // to click on ok.
+ 
+ alt.dismiss(); // to click on cancel.
+ 
+ //Then move the control back to main web page-
+ 
+ driver.switchTo().window(mainPage); > to switch back to main page.
+Ques 9) How do you launch IE/chrome browser?
+
+Ans- Before launching IE or Chrome browser we need to set the System property.
+
+
+//To open IE browser
+
+System.setProperty(“webdriver.ie.driver”,”path of the iedriver.exe file ”);
+
+ WebDriver driver = new InternetExplorerDriver();
+1
+2
+3
+4
+5
+//To open IE browser
+ 
+System.setProperty(“webdriver.ie.driver”,”path of the iedriver.exe file ”);
+ 
+ WebDriver driver = new InternetExplorerDriver();
+
+//To open Chrome browser > System.setProperty(“webdriver.chrome.driver”,”path of the chromeDriver.exe file ”);
+
+ WebDriver driver = new ChromeDriver();
+1
+2
+3
+//To open Chrome browser > System.setProperty(“webdriver.chrome.driver”,”path of the chromeDriver.exe file ”);
+ 
+ WebDriver driver = new ChromeDriver();
+Ques 10) How to perform right click using WebDriver?
+
+Ans- Use Actions class
+
+
+Actions act = new Actions(driver); // where driver is WebDriver type
+
+ act.moveToElement(webElement).perform();
+
+ act.contextClick().perform();
+1
+2
+3
+4
+5
+Actions act = new Actions(driver); // where driver is WebDriver type
+ 
+ act.moveToElement(webElement).perform();
+ 
+ act.contextClick().perform();
+Ques 11) How do perform drag and drop using WebDriver?
+
+Ans- Use Action class
+
+
+Actions act = new Actions(driver);
+
+ WebElement source = driver.findElement(By.xpath(“ -----”)); //source ele which you want to drag
+
+ WebElement target = driver.findElement(By.xpath(“ -----”)); //target where you want to drop
+
+ act.dragAndDrop(source,target).perform();
+1
+2
+3
+4
+5
+6
+7
+Actions act = new Actions(driver);
+ 
+ WebElement source = driver.findElement(By.xpath(“ -----”)); //source ele which you want to drag
+ 
+ WebElement target = driver.findElement(By.xpath(“ -----”)); //target where you want to drop
+ 
+ act.dragAndDrop(source,target).perform();
+Ques 12) Give the example for method overload in WebDriver.
+
+Ans- frame(string), frame(int), frame(WebElement).
+
+Ques 13) How do you upload a file?
+
+Ans- To upload a file we can use sendKeys() method.
+
+
+driver.findElement(By.xpath(“input field”)).sendKeys(“path of the file which u want to upload”);
+1
+driver.findElement(By.xpath(“input field”)).sendKeys(“path of the file which u want to upload”);
+Ques 14) How do you click on a menu item in a drop down menu?
+
+Ans- If that menu has been created by using select tag then we can use the methods selectByValue() or selectByIndex() or selectByVisibleText(). These are the methods of the Select class.
+
+If the menu has not been created by using the select tag then we can simply find the xpath of that element and click on that to select.
+
+Ques 15) How do you simulate browser back and forward ?
+
+
+ driver.navigate().back();
+
+ driver.navigate().forward();
+1
+2
+3
+ driver.navigate().back();
+ 
+ driver.navigate().forward();
+Ques 16) How do you get the current page URL ?
+
+
+driver.getCurrentUrl();
+1
+driver.getCurrentUrl();
+Ques 17) What is the difference between ‘/’ and ‘//’ ?
+
+Ans- //- it is used to search in the entire structure.
+
+/- it is used to identify the immediate child.
+
+Ques 18) What is the difference between findElement and findElements?
+
+Ans- Both methods are abstract method of WebDriver interface and used to find the WebElement in a web page.
+
+findElement() – it used to find the one web element. It return only one WebElement type.
+
+findElements()- it used to find more than one web element. It return List of WebElements.
+
+Ques 19) How do you achieve synchronization in WebDriver ?
+
+Ans- We can use implicit wait.
+
+Syntax- driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+
+Here it will wait for 10sec if while execution driver did not find the element in the page immediately. This code will attach with each and every line of the script automatically. It is not required to write every time. Just write it once after opening the browser.
+
+Ques 20) Write the code for Reading and Writing to Excel through Selenium ?
+
+
+FileInputStream fis = new FileInputStream(“path of excel file”);
+
+ Workbook wb = WorkbookFactory.create(fis);
+
+ Sheet s = wb.getSheet("sheetName");
+
+ String value = s.getRow(rowNum).getCell(cellNum).getStringCellValue(); // read data
+
+ s.getRow(rowNum).getCell(cellNum).setCellValue("value to be set"); //write data
+
+ FileOutputStream fos = new FileOutputStream(“path of file”);
+
+ wb.write(fos); //save file
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+FileInputStream fis = new FileInputStream(“path of excel file”);
+ 
+ Workbook wb = WorkbookFactory.create(fis);
+ 
+ Sheet s = wb.getSheet("sheetName");
+ 
+ String value = s.getRow(rowNum).getCell(cellNum).getStringCellValue(); // read data
+ 
+ s.getRow(rowNum).getCell(cellNum).setCellValue("value to be set"); //write data
+ 
+ FileOutputStream fos = new FileOutputStream(“path of file”);
+ 
+ wb.write(fos); //save file
+Ques 21) How to get typed text from a textbox ?
+
+Ans- use getAttribute(“value”) method by passing arg as value.
+
+
+String typedText = driver.findElement(By.xpath("xpath of box")).getAttribute("value"));
+1
+String typedText = driver.findElement(By.xpath("xpath of box")).getAttribute("value"));
+Ques 22) What are the different exceptions you got when working with WebDriver ?
+
+Ans- ElementNotVisibleException, ElementNotSelectableException, NoAlertPresentException, NoSuchAttributeException, NoSuchWindowException, TimeoutException, WebDriverException etc.
+
+Ques 23) What are the languages supported by WebDriver ?
+
+Ans- Python, Ruby, C# and Java are all supported directly by the development team. There are also webdriver implementations for PHP and Perl.
+
+Ques 24) How do you clear the contents of a textbox in selenium ?
+
+Ans- Use clear() method.
+
+
+driver.findElement(By.xpath("xpath of box")).clear();
+1
+driver.findElement(By.xpath("xpath of box")).clear();
+Ques 25) What is a Framework ?
+
+Ans- A framework is set of automation guidelines which help in
+
+Maintaining consistency of Testing, Improves test structuring, Minimum usage of code, Less Maintenance of code, Improve re-usability, Non Technical testers can be involved in code, Training period of using the tool can be reduced, Involves Data wherever appropriate.
+
+There are five types of framework used in software automation testing:
+
+1-Data Driven Automation Framework
+
+2-Method Driven Automation Framework
+
+3-Modular Automation Framework
+
+4-Keyword Driven Automation Framework
+
+5-Hybrid Automation Framework , its basically combination of different frameworks. (1+2+3).
+
+Ques 26) What are the prerequisites to run selenium webdriver?
+
+Ans- JDK, Eclipse, WebDriver(selenium standalone jar file), browser, application to be tested.
+
+Ques 27) What are the advantages of selenium webdriver?
+
+Ans- a) It supports with most of the browsers like Firefox, IE, Chrome, Safari, Opera etc.
+
+b) It supports with most of the language like Java, Python, Ruby, C# etc.
+
+b) Doesn’t require to start server before executing the test script.
+
+c) It has actual core API which has binding in a range of languages.
+
+d) It supports of moving mouse cursors.
+
+e) It support to test iphone/Android applications.
+
+Ques 28) What is WebDriverBackedSelenium ?
+
+Ans- WebDriverBackedSelenium is a kind of class name where we can create an object for it as below:
+
+
+Selenium wbdriver= new WebDriverBackedSelenium(WebDriver object name, "URL path of website")
+1
+Selenium wbdriver= new WebDriverBackedSelenium(WebDriver object name, "URL path of website")
+The main use of this is when we want to write code using both WebDriver and Selenium RC , we must use above created object to use selenium commands.
+
+Ques 29) How to invoke an application in webdriver ?
+
+
+driver.get(“url”); or driver.navigate().to(“url”);
+1
+driver.get(“url”); or driver.navigate().to(“url”);
+Ques 30) What is Selenium Grid ?
+
+Ans- Selenium-Grid allows you to run your tests on different machines against different browsers in parallel. That is, running multiple tests at the same time against different machines, different browsers and operating systems. Essentially, Selenium-Grid support distributed test execution. It allows for running your tests in a distributed test execution environment.
+
+Ques 31) How to get the number of frames on a page ?
+
+
+List &lt;WebElement&gt; framesList = driver.findElements(By.xpath("//iframe"));
+
+ int numOfFrames = frameList.size();
+1
+2
+3
+List &lt;WebElement&gt; framesList = driver.findElements(By.xpath("//iframe"));
+ 
+ int numOfFrames = frameList.size();
+Ques 32) How do you simulate scroll down action ?
+
+Ans- Use java script to scroll down-
+
+
+JavascriptExecutor jsx = (JavascriptExecutor)driver;
+
+ jsx.executeScript("window.scrollBy(0,4500)", ""); //scroll down, value 4500 you can change as per your req
+
+ jsx.executeScript("window.scrollBy(450,0)", ""); //scroll up
+
+ ex-
+
+ public class ScrollDown {
+
+ public static void main(String[] args) throws InterruptedException {
+
+ WebDriver driver = new FirefoxDriver();
+
+ driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+ driver.get("http://www.flipkart.com/womens-clothing/pr?sid=2oq,c1r&amp;otracker=hp_nmenu_sub_women_1_View%20all");
+
+ driver.manage().window().maximize();
+
+ JavascriptExecutor jsx = (JavascriptExecutor)driver;
+
+ jsx.executeScript("window.scrollBy(0,4500)", ""); //scroll down
+
+ Thread.sleep(3000);
+
+ jsx.executeScript("window.scrollBy(450,0)", ""); //scroll up
+
+ }
+
+ }
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+JavascriptExecutor jsx = (JavascriptExecutor)driver;
+ 
+ jsx.executeScript("window.scrollBy(0,4500)", ""); //scroll down, value 4500 you can change as per your req
+ 
+ jsx.executeScript("window.scrollBy(450,0)", ""); //scroll up
+ 
+ ex-
+ 
+ public class ScrollDown {
+ 
+ public static void main(String[] args) throws InterruptedException {
+ 
+ WebDriver driver = new FirefoxDriver();
+ 
+ driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+ 
+ driver.get("http://www.flipkart.com/womens-clothing/pr?sid=2oq,c1r&amp;otracker=hp_nmenu_sub_women_1_View%20all");
+ 
+ driver.manage().window().maximize();
+ 
+ JavascriptExecutor jsx = (JavascriptExecutor)driver;
+ 
+ jsx.executeScript("window.scrollBy(0,4500)", ""); //scroll down
+ 
+ Thread.sleep(3000);
+ 
+ jsx.executeScript("window.scrollBy(450,0)", ""); //scroll up
+ 
+ }
+ 
+ }
+Ques 33) What is the command line we have to write inside a .bat file to execute a selenium project when we are using testng ?
+
+Ans- java -cp bin;jars/* org.testng.TestNG testng.xml
+
+Ques 34) Which is the package which is to be imported while working with WebDriver ?
+
+Ans- org.openqa.selenium
+
+Ques 35) How to check if an element is visible on the web page ?
+
+Ans- use isDisplayed() method. The return type of the method is boolean. So if it return true then element is visible else not visible.
+
+
+driver.findElement(By.xpath("xpath of elemnt")).isDisplayed();
+1
+driver.findElement(By.xpath("xpath of elemnt")).isDisplayed();
+Ques 36) How to check if a button is enabled on the page ?
+
+Ans- Use isEnabled() method. The return type of the method is boolean. So if it return true then button is enabled else not enabled.
+
+
+driver.findElement(By.xpath("xpath of button")).isEnabled();
+1
+driver.findElement(By.xpath("xpath of button")).isEnabled();
+Ques 37) How to check if a text is highlighted on the page ?
+
+Ans- To identify weather color for a field is different or not-
+
+
+String color = driver.findElement(By.xpath("//a[text()='Shop']")).getCssValue("color");
+
+ String backcolor = driver.findElement(By.xpath("//a[text()='Shop']")).getCssValue("background-color");
+
+ System.out.println(color);
+
+ System.out.println(backcolor);
+1
+2
+3
+4
+5
+6
+7
+String color = driver.findElement(By.xpath("//a[text()='Shop']")).getCssValue("color");
+ 
+ String backcolor = driver.findElement(By.xpath("//a[text()='Shop']")).getCssValue("background-color");
+ 
+ System.out.println(color);
+ 
+ System.out.println(backcolor);
+Here if both color and back color different then that means that element is in different color.
+
+Ques 38) How to check the checkbox or radio button is selected ?
+
+Ans- Use isSelected() method to identify. The return type of the method is boolean. So if it return true then button is selected else not enabled.
+
+
+driver.findElement(By.xpath("xpath of button")).isSelected();
+1
+driver.findElement(By.xpath("xpath of button")).isSelected();
+Ques 39) How to get the title of the page ?
+
+Ans- Use getTitle() method.
+
+
+Syntax- driver.getTitle();
+1
+Syntax- driver.getTitle();
+Ques 40) How do u get the width of the textbox ?
+
+
+driver.findElement(By.xpath(“xpath of textbox ”)).getSize().getWidth();
+
+driver.findElement(By.xpath(“xpath of textbox ”)).getSize().getHeight();
+1
+2
+3
+driver.findElement(By.xpath(“xpath of textbox ”)).getSize().getWidth();
+ 
+driver.findElement(By.xpath(“xpath of textbox ”)).getSize().getHeight();
+Ques 41) How do u get the attribute of the web element ?
+
+Ans- driver.getElement(By.tagName(“img”)).getAttribute(“src”) will give you the src attribute of this tag. Similarly, you can get the values of attributes such as title, alt etc.
+
+Similarly you can get CSS properties of any tag by using getCssValue(“some propety name”).
+
+Ques 42) How to check whether a text is underlined or not ?
+
+
+Ans- Identify by getCssValue(“border-bottom”) or sometime getCssValue(“text-decoration”) method if the
+
+ cssValue is 'underline' for that WebElement or not.
+
+ ex- This is for when moving cursor over element that is going to be underlined or not-
+
+ public class UnderLine {
+
+ public static void main(String[] args) {
+
+ WebDriver driver = new FirefoxDriver();
+
+ driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+ driver.get("https://www.google.co.in/?gfe_rd=ctrl&amp;ei=bXAwU8jYN4W6iAf8zIDgDA&amp;gws_rd=cr");
+
+ String cssValue= driver.findElement(By.xpath("//a[text()='Hindi']")).getCssValue("text-decoration");
+
+ System.out.println("value"+cssValue);
+
+ Actions act = new Actions(driver);
+
+ act.moveToElement(driver.findElement(By.xpath("//a[text()='Hindi']"))).perform();
+
+ String cssValue1= driver.findElement(By.xpath("//a[text()='Hindi']")).getCssValue("text-decoration");
+
+ System.out.println("value over"+cssValue1);
+
+ driver.close();
+
+ }
+
+ }
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+Ans- Identify by getCssValue(“border-bottom”) or sometime getCssValue(“text-decoration”) method if the
+ 
+ cssValue is 'underline' for that WebElement or not.
+ 
+ ex- This is for when moving cursor over element that is going to be underlined or not-
+ 
+ public class UnderLine {
+ 
+ public static void main(String[] args) {
+ 
+ WebDriver driver = new FirefoxDriver();
+ 
+ driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+ 
+ driver.get("https://www.google.co.in/?gfe_rd=ctrl&amp;ei=bXAwU8jYN4W6iAf8zIDgDA&amp;gws_rd=cr");
+ 
+ String cssValue= driver.findElement(By.xpath("//a[text()='Hindi']")).getCssValue("text-decoration");
+ 
+ System.out.println("value"+cssValue);
+ 
+ Actions act = new Actions(driver);
+ 
+ act.moveToElement(driver.findElement(By.xpath("//a[text()='Hindi']"))).perform();
+ 
+ String cssValue1= driver.findElement(By.xpath("//a[text()='Hindi']")).getCssValue("text-decoration");
+ 
+ System.out.println("value over"+cssValue1);
+ 
+ driver.close();
+ 
+ }
+ 
+ }
+Ques 43) How to change the URL on a webpage using selenium web driver ?
+
+
+driver.get(“url1”);
+
+driver.get(“url2”);
+1
+2
+3
+driver.get(“url1”);
+ 
+driver.get(“url2”);
+Ques 44) How to hover the mouse on an element ?
+
+
+Actions act = new Actions(driver);
+
+act.moveToElement(webelement); //webelement on which you want to move cursor
+1
+2
+3
+Actions act = new Actions(driver);
+ 
+act.moveToElement(webelement); //webelement on which you want to move cursor
+Ques 45) What is the use of getOptions() method ?
+
+Ans- getOptions() is used to get the selected option from the dropdown list.
+
+Ques 46) What is the use of deSelectAll() method ?
+
+Ans- It is used to deselect all the options which have been selected from the dropdown list.
+
+Ques 47) Is WebElement an interface or a class ?
+
+Ans- WebDriver is an Interface.
+
+Ques 48) FirefoxDriver is class or an interface and from where is it inherited ?
+
+Ans- FirefoxDriver is a class. It implements all the methods of WebDriver interface.
+
+Ques 49) Which is the super interface of webdriver ?
+
+Ans- SearchContext.
+
+Ques 50) What is the difference b/w close() and quit()?
+
+Ans- close() – it will close the browser where the control is.
+
+quit() – it will close all the browsers opened by WebDriver
