@@ -182,4 +182,23 @@ Practice Exercise 2
 #. Переключится на окно Alert window (используйте метод switchTo().alert())
 #. Закройте всплывающее окно (используя метод accept)
 
+*************
+Drag And Drop
+*************
 
+.. _DragAndDrop: http://toolsqa.com/selenium-webdriver/drag-drop/
+
+Practice Exercise 1
+===================
+
+#. Запустить браузер
+#. Открыть url “http://www.dhtmlx.com/docs/products/dhtmlxTree/index.shtml”
+#. В Live Demo найти папку Thriller в левой панели 
+#. Переместить найденный элемент из левой панели в правую в папку Bestsellers 
+
+http://www.w3schools.com/html/html5_draganddrop.asp
+
+http://store.demoqa.com/
+
+context:
+https://swisnl.github.io/jQuery-contextMenu/demo.html

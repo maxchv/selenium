@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>jQuery UI Selectable - Serialize</title>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
+
 
     <style>
         #feedback {
@@ -25,7 +25,7 @@
             list-style-type: none;
             margin: 0;
             padding: 0;
-            width: 60%;
+            width: 300px;
         }
 
         #selectable li {
@@ -33,6 +33,7 @@
             padding: 0.4em;
             font-size: 1.4em;
             height: 18px;
+            border: 1px dashed gray;
         }
     </style>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -55,17 +56,17 @@
 <p id="feedback">
     <span>You've selected:</span> <span id="select-result">none</span>.
 </p>
-<ol id="selectable"  class="ui-selectable">
-    <li class="ui-state-default ui-selectee" name="one" value="one">1</li>
-    <li class="ui-state-default ui-selectee" name="two" value="two">2</li>
-    <li class="ui-state-default ui-selectee" name="three" value="three">3</li>
-    <li class="ui-state-default ui-selectee" name="four" value="four">4</li>
-    <li class="ui-state-default ui-selectee" name="five" value="five">5</li>
-    <li class="ui-state-default ui-selectee" name="six" value="six">6</li>
-    <li class="ui-state-default ui-selectee" name="seven" value="seven">7</li>
-    <li class="ui-state-default ui-selectee" name="eight" value="eight">8</li>
-    <li class="ui-state-default ui-selectee" name="nine" value="nine">9</li>
-    <li class="ui-state-default ui-selectee" name="ten" value="ten">10</li>
+<ol id="selectable" class="ui-selectable">
+    <li class="ui-state-default ui-selectee">1</li>
+    <li class="ui-state-default ui-selectee">2</li>
+    <li class="ui-state-default ui-selectee">3</li>
+    <li class="ui-state-default ui-selectee">4</li>
+    <li class="ui-state-default ui-selectee">5</li>
+    <li class="ui-state-default ui-selectee">6</li>
+    <li class="ui-state-default ui-selectee">7</li>
+    <li class="ui-state-default ui-selectee">8</li>
+    <li class="ui-state-default ui-selectee">9</li>
+    <li class="ui-state-default ui-selectee">10</li>
 </ol>
 </body>
 </html>
