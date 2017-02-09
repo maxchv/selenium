@@ -182,23 +182,59 @@ Practice Exercise 2
 #. Переключится на окно Alert window (используйте метод switchTo().alert())
 #. Закройте всплывающее окно (используя метод accept)
 
-*************
-Drag And Drop
-*************
+***************
+Complex Actions
+***************
 
 .. _DragAndDrop: http://toolsqa.com/selenium-webdriver/drag-drop/
 
-Practice Exercise 1
-===================
+Practice Exercise Drag'n'Drop #1
+================================
 
 #. Запустить браузер
 #. Открыть url “http://www.dhtmlx.com/docs/products/dhtmlxTree/index.shtml”
 #. В Live Demo найти папку Thriller в левой панели 
 #. Переместить найденный элемент из левой панели в правую в папку Bestsellers 
+#. Использовать методы класса Actions: clickAndHold, moveToElement, release
 
-http://www.w3schools.com/html/html5_draganddrop.asp
+Practice Exercise Drag'n'Drop #2
+================================
 
-http://store.demoqa.com/
+#. Запустить браузер
+#. Открыть url http://www.w3schools.com/html/html5_draganddrop.asp
+#. Найти изображение w3schools.com 
+#. Переместить изображение с левого прямоугольника в правый
+#. Использовать методы класса Actions: dragAndDrop
+
+Practice Exercise Context Menu #1
+=================================
+
+#. Запустить браузер
+#. Открыть url http://www.trendskitchens.co.nz/jquery/contextmenu/
+#. Найти элемент с содержимым 'DEMO right-click me!!'
+#. Нажать правой кнопкой мыши
+#. В появившемся контекстном меню кликнуть левой кнопкой мыши по пункту 'Open'
+#. В появившемся модальном окне alert проверить содержимое 'Trigger was quickDemo\nAction was Open'
+#. Закрыть модальное окно
+#. Снова нажать правой кнопкой мыши по элементу с содержимым 'DEMO right-click me!!'
+#. В появившемся контекстном меню кликнуть левой кнопкой мыши по пункту 'Save'
+#. В появившемся модальном окне alert проверить содержимое 'Trigger was quickDemo\nAction was Save'
+#. Закрыть модальное окно
+#. Закрыть браузер
+
+Practice Exercise Complex Actions
+=================================
+
+#. Запустить браузер
+#. Открыть url http://store.demoqa.com/
+#. Подвести курсор мыши к пункту меню Product Category
+#. В появившемся меню выбрать пункт iPads
+#. После загрузки страницы подвести курсор мыши к пункту меню ProductCategory
+#. В появившемся меню выбрать пункт iMacs
+#. После загрузки страницы подвести курсор мыши к пункту меню ProductCategory
+#. В появившемся меню выбрать пункт MacBooks
+#. После загрузки страницы перейти к товару "Apple 13-inch MacBook Pro" и кликнуть по закголовку
+#. После загрузки информации о товаре проверить цену акционного товара ($864.00 вместо $999.00)
 
 context:
 https://swisnl.github.io/jQuery-contextMenu/demo.html
