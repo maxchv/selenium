@@ -10,9 +10,15 @@ import org.junit.runners.model.Statement;
 public class JUnitTestReporter {
     @Rule
     public TestRule jUnitWatcher = new TestWatcher() {
+
         @Override
-        public Statement apply(Statement base, Description description) {
-            return super.apply(base, description);
+        protected void finished(Description description) {
+            System.out.println("Fin");
+        }
+
+        @Override
+        protected void starting(Description description) {
+            System.out.println("Start");
         }
 
         @Override

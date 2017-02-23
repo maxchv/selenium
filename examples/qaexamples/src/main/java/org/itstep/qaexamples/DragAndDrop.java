@@ -20,12 +20,12 @@ import java.util.concurrent.TimeUnit;
 public class DragAndDrop {
 
     public static void main(String[] args) throws InterruptedException {
-        //System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
         //System.setProperty("webdriver.chrome.driver", "D:\\webdrivers\\chromedriver.exe");
-        System.setProperty("webdriver.gecko.driver", "D:\\webdrivers\\geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver", "C:\\geckodriver.exe");
         FirefoxProfile profile = new FirefoxProfile();
         profile.setEnableNativeEvents(true);
-        WebDriver driver = new FirefoxDriver(profile);//ChromeDriver();
+        WebDriver driver = new FirefoxDriver(profile); //new ChromeDriver();
 
         String URL = "http://www.dhtmlx.com/docs/products/dhtmlxTree/index.shtml";
 
@@ -42,14 +42,11 @@ public class DragAndDrop {
         System.out.println("To.getTagName() = " + To.getTagName());
         Actions builder = new Actions(driver);
 
-
-
-
         Action dragAndDrop = builder
-                //.clickAndHold(From)
-                //.moveToElement(To)
-                //.release(To)
-                .dragAndDrop(From, To)
+                .clickAndHold(From)
+                .moveToElement(To)
+                .release(To)
+                //.dragAndDrop(From, To)
                 .build();
 
         dragAndDrop.perform();

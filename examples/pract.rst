@@ -206,6 +206,9 @@ Practice Exercise Drag'n'Drop #2
 #. Переместить изображение с левого прямоугольника в правый
 #. Использовать методы класса Actions: dragAndDrop
 
+https://seleniumonlinetrainingexpert.wordpress.com/tag/performing-drag-and-drop-operations/
+http://tinyurl.com/burdnrx
+
 Practice Exercise Context Menu #1
 =================================
 
