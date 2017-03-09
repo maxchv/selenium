@@ -1,0 +1,20 @@
+1. Запуск сервера https://goo.gl/dR7Lg2
+	java -jar selenium-server-standalone-3.2.0.jar -role hub -port 4444
+
+2. Проверить работу сервера в браузере по адресу http://localhost:4444
+
+3. Подключение узлов к хабу
+   Настройки переменной окружения:
+	set PATH=%PATH%;d:\webdrivers
+   Запуск узла
+	java -jar selenium-server-standalone-3.2.0.jar -role node -hub http://<hub-ip>:4444/grid/register
+
+4. Выполняем тест через RemoteWebDriver
+	URL remoteAddress = new URL("http://<hub-ip>:4444/wd/hub");
+        DesiredCapabilities desiredCapabilities = DesiredCapabilities.firefox(); //new DesiredCapabilities();
+
+        //desiredCapabilities.setCapability("browserName", "firefox");
+        //desiredCapabilities.setBrowserName("firefox");
+        //desiredCapabilities.setPlatform(Platform.WINDOWS);
+
+        WebDriver driver= new RemoteWebDriver(remoteAddress, desiredCapabilities);

@@ -280,4 +280,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 .idea
+<<<<<<< HEAD
+=======
+target
+>>>>>>> 2a10f9825f536fe0cc2980ce3d9b216d5b6a15d0
 *.class

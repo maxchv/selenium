@@ -1,0 +1,20 @@
+Архетип (шаблон) приложения для тестирования на базе шаблона PageObject Pattern
+
+GroupID: ru.stqa.selenium
+ArtifactID: webdriver-junit-archetype
+Version: 3.0
+
+Тестовый сайт:
+
+url: http://qaitstep.wordpress.com
+login: shaptala@itstep.org
+password: webdriver123
+
+Написать сценарий (с применением шаблона PageObject) для тестирования добавления записи на страницы блога:
+
+ 1. Ввести логин, пароль (https://qaitstep.wordpress.com/wp-login.php)
+ 2. Перейти в админ панель
+ 3. Добавить запись
+ 4. Выйти из админ панели
+ 5. Перейти на главную страницу сайта
+ 6. Проверить наличие добавленной записи
