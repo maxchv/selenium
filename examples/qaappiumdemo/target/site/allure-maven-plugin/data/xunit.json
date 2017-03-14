@@ -1,0 +1,49 @@
+{
+  "time" : {
+    "start" : 1489012497296,
+    "stop" : 1489012497424,
+    "duration" : 128
+  },
+  "testSuites" : [ {
+    "uid" : "2f64a75cb382409c",
+    "name" : "FirstTest",
+    "title" : "First test",
+    "time" : {
+      "start" : 1489012497296,
+      "stop" : 1489012497424,
+      "duration" : 128
+    },
+    "statistic" : {
+      "total" : 2,
+      "passed" : 1,
+      "pending" : 0,
+      "canceled" : 0,
+      "failed" : 1,
+      "broken" : 0
+    },
+    "description" : null,
+    "testCases" : [ {
+      "uid" : "42ef5d03e3e7e997",
+      "name" : "fails",
+      "title" : "Fails",
+      "time" : {
+        "start" : 1489012497296,
+        "stop" : 1489012497415,
+        "duration" : 119
+      },
+      "severity" : "NORMAL",
+      "status" : "FAILED"
+    }, {
+      "uid" : "1cd8bb57d711155e",
+      "name" : "start",
+      "title" : "Start",
+      "time" : {
+        "start" : 1489012497417,
+        "stop" : 1489012497424,
+        "duration" : 7
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    } ]
+  } ]
+}

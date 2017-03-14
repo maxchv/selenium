@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: FirstTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.47 sec <<< FAILURE!
+fails(FirstTest)  Time elapsed: 2.296 sec  <<< FAILURE!
+java.lang.AssertionError: Должно быть true
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at FirstTest.fails(FirstTest.java:16)
+

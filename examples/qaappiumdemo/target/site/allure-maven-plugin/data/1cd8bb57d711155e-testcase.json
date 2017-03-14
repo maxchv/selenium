@@ -1,0 +1,47 @@
+{
+  "uid" : "1cd8bb57d711155e",
+  "name" : "start",
+  "title" : "Start",
+  "time" : {
+    "start" : 1489012497417,
+    "stop" : 1489012497424,
+    "duration" : 7
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "2f64a75cb382409c",
+    "name" : "FirstTest",
+    "title" : "First test"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "6884@MaxPC.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "JUnit"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  }, {
+    "name" : "suite-name",
+    "value" : "FirstTest"
+  }, {
+    "name" : "host",
+    "value" : "MaxPC"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  } ],
+  "parameters" : [ ]
+}
