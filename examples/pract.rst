@@ -2,23 +2,23 @@
 Selenium Practice Excercises
 ############################
 
-***************************
-Browser Navigation Commands
-***************************
+**************************
+Команды навигации браузера
+**************************
 
 .. _NavigatePrcactice:  http://toolsqa.wpengine.com/selenium-webdriver/browser-navigation-commands/
 
-Practice Exercise
-=================
+Практическое задание1
+=====================
 
 #. Запустить браузер
-#. Open http://DemoQA.com website
-#. Click on Registration link using “driver.findElement(By.xpath(“.//*[@id=’menu-item-374?]/a”)).click();“
-#. Come back to Home page (Use ‘Back’ command)
-#. Again go back to Registration page (This time use ‘Forward’ command)
-#. Again come back to Home page (This time use ‘To’ command)
-#. Refresh the Browser (Use ‘Refresh’ command)
-#. Close the Browser
+#. Открыть ссылку http://DemoQA.com
+#. Нажать на ссылку Registration link используя xpath “driver.findElement(By.xpath(“.//*[@id=’menu-item-374?]/a”)).click();“
+#. Вернуться на главную страницу (используя команду ‘Back’)
+#. Снова перейти на страницу регистрации (На этот раз используйте команду ‘Forward’)
+#. Опять перейти на главную страницу (В этот раз используйте команду ‘To’)
+#. Обновите браузер (исползуя команду ‘Refresh’)
+#. Закройте браузер
 
 **************************
 WebDriver Browser Commands
@@ -29,22 +29,22 @@ WebDriver Browser Commands
 Practice Exercise 1
 ===================
 
-#. Launch a new Firefox browser.
-#. Open http://Store.DemoQA.com
-#. Get Page Title name and Title length
-#. Print Page Title and Title length on the Eclipse Console.
-#. Get Page URL and verify if the it is a correct page opened
-#. Get Page Source (HTML Source code) and Page Source length
-#. Print Page Length on Eclipse Console.
-#. Close the Browser.
+#. Запустите браузер.
+#. Откройте ссылку http://Store.DemoQA.com
+#. Получите содержимое заголовка веб-старницы (тега title)
+#. Напечатайте заголовок и его длину в консоль.
+#. Получите URL страницы и проверте его корректонсть
+#. Получите исходный html код страницы
+#. Вывести исходный html код и его длину в консоли.
+#. Закройте браузер.
 
 Practice Exercise – 2
 =====================
 
-#. Launch a new Firefox browser.
-#. Open http://demoqa.com/frames-and-windows/
-#. Use this statement to click on a New Window button “driver.findElement(By.xpath(“.//*[@id=’tabs-1?]/div/p/a”)).click();”
-#. Close the browser using close() command
+#. Запустите браузер.
+#. Откройте ссылку http://demoqa.com/frames-and-windows/
+#. Откройте новое окно нажав по ссылке “driver.findElement(By.xpath(“.//*[@id=’tabs-1?]/div/p/a”)).click();”
+#. Закройте браузер командой close()
 
 *******************
 WebElement Commands
