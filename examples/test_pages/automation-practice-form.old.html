@@ -24,24 +24,11 @@
             margin-top: 10px;
             margin-left: 10px;
         }
-
-        .inline {
-            margin-left: 5px;
-            display: inline-block;
-        }
-
-        summary {
-            cursor: pointer;
-        }
-
-        details label {
-            margin-left: 50px;
-            display: block;
-        }
-
-        .checked-task {
-            text-decoration: line-through;
-        }
+		
+		.inline {
+			margin-left: 5px;
+			display: inline-block;
+		}
     </style>
 </head>
 
@@ -59,7 +46,7 @@
             <p>
                 <!-- Text input-->
             </p>
-            <div class="control-group">
+            <div class="control-group">                
                 <label><strong>First name:</strong><input name="firstname" type="text"></label>
                 <br/>
                 <label><strong>Last name:</strong><input name="lastname" type="text"></label>
@@ -68,9 +55,9 @@
                 <!-- Multiple Radios -->
             </p>
             <div class="control-group">
-                <strong>Sex</strong>
+				<strong>Sex</strong>
                 <input id="sex-0" name="sex" type="radio" value="Male">
-                <label for="sex-0">Male</label>
+				<label for="sex-0">Male</label>
                 <input id="sex-1" name="sex" type="radio" value="Female">
                 <label class="radio" for="sex-1">Female</label>
             </div>
@@ -139,13 +126,13 @@
                 <label><strong>Continents</strong>
                     <!--<div class="controls">-->
                     <select id="continents" class="input-xlarge" name="continents">
-                        <option value="none"></option>
+						<option value="none"></option>
                         <option value="asia">Asia</option>
+                        <option value="europe">Europe</option>
                         <option value="africa">Africa</option>
-                        <option value="europe">Erope</option>
                         <option value="australia">Australia</option>
                         <option value="samerica">South America</option>
-                        <option value="namerica">NAmerica</option>
+                        <option value="namerica">North America</option>
                         <option value="antarctica">Antarctica</option>
                     </select>
                     <!--</div>-->
@@ -179,80 +166,38 @@
 
 </div>
 <div>
+	Практическое задание 1 (Drop Down Box/List)
+=========================================
 
+#. Запустить браузер
+#. Открыть файл  “automation-practice-form.html“
+#. Найдите выподающий список ‘Continents’ (используйте идентификатор элемента)
+#. Выберите опцию ‘Europe’ (используя selectByIndex)
+#. Проверьте текст выбранной опции и выведите его в консоль
+#. Теперь выбирите опцию ‘Africa’ (исползуя selectByVisibleText)
+#. Проверьте значение выбранной опции (атрибут value) и вывидите его в консоль
+#. Выберите опцию 'North America' (используя метод selectByValue)
+#. Проверьте текст выбранной опции и выведите его в консоль
+#. Выведите в консоли все возможные опции для выбранного выпадающего списка
+#. Закройте браузер
 
-    <details id="task1">
-        <summary>Практическое задание 1</summary>
-        <div>
-            <label> <input type="checkbox"> Запустить браузер</label>
-            <label> <input type="checkbox"> Найдите выподающий список ‘Continents’ (используйте идентификатор элемента)</label>
-            <label> <input type="checkbox"> Выберите опцию ‘Europe’ (используя selectByIndex)</label>
-            <label> <input type="checkbox"> Проверьте текст выбранной опции и выведите его в консоль</label>
-            <label> <input type="checkbox"> Теперь выбирите опцию ‘Africa’ (исползуя selectByVisibleText)</label>
-            <label> <input type="checkbox"> Проверьте значение выбранной опции (атрибут value) и вывидите его в консоль</label>
-            <label> <input type="checkbox"> Выберите опцию 'North America' (используя метод selectByValue)</label>
-            <label> <input type="checkbox"> Проверьте текст выбранной опции и выведите его в консоль</label>
-            <label> <input type="checkbox"> Выведите в консоли все возможные опции для выбранного выпадающего списка</label>
-            <label> <input type="checkbox"> Закройте браузер</label>
-        </div>
-    </details>
-    <script>
-        $(function () {
-            var checkboxes = $("input[type=checkbox]");
-            checkboxes.click(function () {
-                $(this).parent().toggleClass('checked-task');
-                checkboxes.each(function(i, chechbox){
-                    localStorage['checkbox'+i] = $(chechbox).hasClass('checked-task');
-                });
-            });
+Практическое задание 2 (Multiple Selection Box/List)
+==================================================
 
-            var details = $("details");
-            details.each(function(i, d){
-                console.log(i + " " + d.open);
-                console.log($(d).prop('id') + ': ' + localStorage.getItem($(d).prop('id')));
-                d.open = localStorage.getItem($(d).prop('id')) == 'true';
-            });
-
-            checkboxes.each(function(i, chechbox){
-                if(localStorage.getItem('checkbox'+i) == 'true' ) {
-                    $(chechbox).prop('class', 'checked-task');
-                }
-            });
-
-            details.click(function (d) {
-                var id = $(this).prop('id');
-                console.log(id + ' ' + !this.open);
-                localStorage[id] = !this.open;
-            });
-        });
-    </script>
-    <details id="task2">
-        <summary>Практическое задание 2</summary>
-        <div>
-            <label> <input type="checkbox"> Запустить браузер</label>
-            <label> <input type="checkbox"> Найдите элемент списка ‘Selenium Commands’ (используйте атрибут name для
-                идентификации элемента)</label>
-            <label> <input type="checkbox"> Выберите опцию ‘Browser Commands’ (исползуя метод selectByIndex)</label>
-            <label> <input type="checkbox"> Проверьте выбранные опции (используя метод getAllSelectedOptions)</label>
-            <label> <input type="checkbox"> Отмените выбранную опцию ‘Browser Commands’ (используя метод
-                deselectByIndex)</label>
-            <label> <input type="checkbox"> Выберите опцию ‘Navigation Commands’ (используя метод
-                selectByVisibleText)</label>
-            <label> <input type="checkbox"> Проверьте все выбранные опции (используя метод
-                getAllSelectedOptions)</label>
-            <label> <input type="checkbox"> Отмените выбранную опцию Navigation Commands’ (используя метод
-                deselectByVisibleText)</label>
-            <label> <input type="checkbox"> Выберите опцию ‘Wait Commands’, 'WebElement Commands' и 'Switch Commands'
-                одновременно (используя метод
-                selectByValue)</label>
-            <label> <input type="checkbox"> Проверьте все выбранные опции (используя метод getAllSelectedOptions) и
-                выведите их в консоль</label>
-            <label> <input type="checkbox"> Выведите в консоли все опции списка ‘Selenium Commands’ (используя метод
-                getOptions).</label>
-            <label> <input type="checkbox"> Отмените все опции (испольуя метод deselectAll)</label>
-            <label> <input type="checkbox"> Закройте браузер</label>
-        </div>
-    </details>
+#. Запустить браузер
+#. Открыть файл  “automation-practice-form.html“
+#. Найдите элемент списка ‘Selenium Commands’ (используйте атрибут name для идентификации элемента)
+#. Выберите опцию ‘Browser Commands’  (исползуя метод selectByIndex)
+#. Проверьте выбранные опции (используя метод getAllSelectedOptions)
+#. Отмените выбранную опцию ‘Browser Commands’ (используя метод deselectByIndex)
+#. Выберите опцию ‘Navigation Commands’ (используя метод selectByVisibleText)
+#. Проверьте все выбранные опции (используя метод getAllSelectedOptions)
+#. Отмените выбранную опцию Navigation Commands’ (используя метод deselectByVisibleText)
+#. Выберите опцию ‘Wait Commands’, 'WebElement Commands' и 'Switch Commands' одновременно (используя метод selectByValue)
+#. Проверьте все выбранные опции (используя метод getAllSelectedOptions) и выведите их в консоль
+#. Выведите в консоли все опции списка ‘Selenium Commands’ (используя метод getOptions).
+#. Отмените все опции (испольуя метод deselectAll)
+#. Закройте браузер
 </div>
 </body>
 
