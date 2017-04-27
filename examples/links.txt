@@ -4,3 +4,4 @@ http://internetka.in.ua/category/testing/selenium/
 
 Demo:
 	http://phptravels.com/demo.php/
+	http://test1.absofttrainings.com/
