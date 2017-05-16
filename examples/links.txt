@@ -3,5 +3,7 @@ https://github.com/previousdeveloper/Selenium-best-practices
 http://internetka.in.ua/category/testing/selenium/
 
 Demo:
-	http://phptravels.com/demo.php/
+	http://the-internet.herokuapp.com
+	http://www.seleniumeasy.com/test/drag-and-drop-demo.html
+	http://phptravels.com/demo.php/1
 	http://test1.absofttrainings.com/
