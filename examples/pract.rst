@@ -194,10 +194,10 @@ Practice Exercise Drag'n'Drop #1
 ================================
 
 #. Запустить браузер
-#. Открыть url “http://www.dhtmlx.com/docs/products/dhtmlxTree/index.shtml”
-#. В Live Demo найти папку Thriller в левой панели 
-#. Переместить найденный элемент из левой панели в правую в папку Bestsellers 
-#. Использовать методы класса Actions: clickAndHold, moveToElement, release
+#. Открыть url “http://the-internet.herokuapp.com/drag_and_drop”
+#. Переместить блок A на место блока B 
+#. Проверить, что в элементе #column-a>header содежрится текст B
+#. Проверить, что в элементе #column-b>header содежрится текст A
 
 Practice Exercise Drag'n'Drop #2
 ================================
@@ -206,7 +206,6 @@ Practice Exercise Drag'n'Drop #2
 #. Открыть url http://www.w3schools.com/html/html5_draganddrop.asp
 #. Найти изображение w3schools.com 
 #. Переместить изображение с левого прямоугольника в правый
-#. Использовать методы класса Actions: dragAndDrop
 
 https://seleniumonlinetrainingexpert.wordpress.com/tag/performing-drag-and-drop-operations/
 http://tinyurl.com/burdnrx
