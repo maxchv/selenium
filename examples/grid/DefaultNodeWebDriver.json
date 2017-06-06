@@ -11,9 +11,14 @@
       "maxInstances": 5,
       "seleniumProtocol": "WebDriver"
     },
+	{
+      "browserName": "opera",
+      "maxInstances": 1,
+      "seleniumProtocol": "WebDriver"
+    },
     {
       "browserName": "internet explorer",
-      "maxInstances": 1,
+      "maxInstances": 5,
       "seleniumProtocol": "WebDriver"
     }
   ],
@@ -22,7 +27,7 @@
   "port": 5555,
   "register": true,
   "registerCycle": 5000,
-  "hub": "http://localhost:4444",
+  "hub": "http://localhost:4445",
   "nodeStatusCheckTimeout": 5000,
   "nodePolling": 5000,
   "role": "node",

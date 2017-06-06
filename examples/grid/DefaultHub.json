@@ -1,5 +1,5 @@
 {
-  "port": 4444,
+  "port": 4445,
   "newSessionWaitTimeout": -1,
   "servlets" : [],
   "maxSession": 15,

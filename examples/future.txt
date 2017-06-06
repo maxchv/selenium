@@ -1,0 +1,3 @@
+Для будующих занятий:
+
+http://www.seleniumeasy.com/selenium-tutorials/webdriver-event-listener-example
