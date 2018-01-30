@@ -150,6 +150,13 @@
                     </select>
                     <!--</div>-->
                 </label>
+				<!--
+				<script>
+						$("#continents").change(function(){
+							$("#continents :selected").remove();
+						});
+				</script>
+				-->
             </div>
             <p>
                 <!-- Select Multiple -->
@@ -243,8 +250,7 @@
             <label> <input type="checkbox"> Отмените выбранную опцию Navigation Commands’ (используя метод
                 deselectByVisibleText)</label>
             <label> <input type="checkbox"> Выберите опцию ‘Wait Commands’, 'WebElement Commands' и 'Switch Commands'
-                одновременно (используя метод
-                selectByValue)</label>
+                одновременно (используя метод selectByValue)</label>
             <label> <input type="checkbox"> Проверьте все выбранные опции (используя метод getAllSelectedOptions) и
                 выведите их в консоль</label>
             <label> <input type="checkbox"> Выведите в консоли все опции списка ‘Selenium Commands’ (используя метод
