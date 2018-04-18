@@ -241,4 +241,11 @@ Practice Exercise Complex Actions
 #. После загрузки информации о товаре проверить цену акционного товара ($864.00 вместо $999.00)
 
 context:
-https://swisnl.github.io/jQuery-contextMenu/demo.html
+#. Запустить браузер
+#. Открыть url https://swisnl.github.io/jQuery-contextMenu/demo.html
+#. Кликнуть правой кнопкой мыши по кнопке "right click me"
+#. В появившемся конекстном меню нажать на кнопку "Quit"
+#. Переключится на модальное диалоговое окно alert
+#. Проверить текст сообщения в "alert: clicked: quit"
+#. Закрыть модально окно
+#. Закрыть браузер
