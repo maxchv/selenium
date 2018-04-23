@@ -1,9 +1,5 @@
 ﻿Архетип (шаблон) приложения для тестирования на базе шаблона PageObject Pattern
 
-GroupID: ru.stqa.selenium
-ArtifactID: webdriver-junit-archetype
-Version: 3.0
-
 Тестовый сайт:
 
 url: http://qaitstep.wordpress.com
