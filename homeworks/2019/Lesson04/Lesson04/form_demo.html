@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method='get'>
+        <label for="login">Login:</label>
+        <input type="text" id="login" name="login"> <br>
+
+        <!--        <label for="pass">Password:</label>-->
+        <input type="password" name="pass" id="pass" placeholder="Password"> <br>
+
+        <input type="radio" id='male_gender' name="gender" value='male'>
+        <label for="male_gender">Male</label>
+
+        <input type="radio" id='female_gender' name="gender" value='female'>
+        <label for="female_gender">Female</label>
+        <br>
+
+        <label for="remember-me">Запомнить ввод</label>
+        <input type="checkbox" name="remember" id="remember-me">
+        <!--
+        <input type="checkbox" name="remember" id="remember-me">
+        <input type="checkbox" name="remember" id="remember-me">
+        
+-->
+        <br>
+        <input type="reset" value="Очистить">
+        <input type="hidden" value="123124">
+
+
+        <br>
+        <input type="file">
+        <br>
+
+        <textarea cols="30" rows="10">
+
+        </textarea>
+        <br>
+        <label for="single">Выбор одного</label>
+        <select name='number' id="single">
+            <option>First</option>
+            <option value="scnd">Second</option>
+            <option value="thrd">Third</option>
+        </select>
+        <br>
+        <label for="multi">Выбор нескольких</label>
+        <select multiple name='multi-number' id="multi">
+            <option>First</option>
+            <option value="scnd">Second</option>
+            <option value="thrd">Third</option>
+        </select>
+        <br>
+        <input type="image" width="100px" src='https://static1.squarespace.com/static/53ff9831e4b0b1b06904c5e0/t/596f2e6646c3c4022a2f1615/1500458645687/SubmitButtonAnimation.gif?format=1500w'>
+        <input type="button" value="hello">
+        <input type="submit" value="Вход">
+    </form>
+</body></html>

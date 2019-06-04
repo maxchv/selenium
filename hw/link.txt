@@ -1,3 +1,0 @@
-Сайт для тестирования xpath: http://codebeautify.org/Xpath-Tester#
-
-test select: http://www.mobile.de/ru

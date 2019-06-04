@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo page</title>
+    <style>
+
+        html {
+            margin: 50px 10px;
+            font-family: cursive;
+        }
+
+        form {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        div {
+            margin-bottom: 10px;
+        }
+
+        fieldset {
+            background: cyan;
+            border: 5px solid blue;
+        }
+
+        legend {
+            padding: 10px;
+            background: blue;
+            color: cyan;
+        }
+
+        code {
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body>
+<h1>Checkbox, Radio buttons and DropDown elements</h1>
+<h2>Checkbox</h2>
+<pre>
+    <code>
+        &lt;div&gt;
+            &lt;input type=&quot;<mark>checkbox</mark>&quot; id=&quot;coding&quot; name=&quot;interest&quot; value=&quot;coding&quot;&gt;
+            &lt;label for=&quot;coding&quot;&gt;Coding&lt;/label&gt;
+        &lt;/div&gt;
+    </code>
+</pre>
+<form id="form1">
+    <fieldset>
+        <legend>Choose your interests</legend>
+        <div>
+            <input type="checkbox" id="coding" name="interest" value="coding">
+            <label for="coding">Coding</label>
+        </div>
+        <div>
+            <input type="checkbox" id="music" name="interest" value="music">
+            <label for="music">Music</label>
+        </div>
+        <div>
+            <input type="checkbox" id="art" name="interest" value="art">
+            <label for="art">Art</label>
+        </div>
+        <div>
+            <input type="checkbox" id="sports" name="interest" value="sports">
+            <label for="sports">Sports</label>
+        </div>
+        <div>
+            <input type="checkbox" id="cooking" name="interest" value="cooking">
+            <label for="cooking">Cooking</label>
+        </div>
+        <div>
+            <input type="checkbox" id="other" name="interest" value="other">
+            <label for="other">Other</label>
+        </div>
+        <div>
+            <button type="submit">Submit form</button>
+        </div>
+    </fieldset>
+</form>
+<h2>Radio buttons</h2>
+<pre>
+    <code>
+        &lt;div&gt;
+            &lt;input type=&quot;<mark>radio</mark>&quot; id=&quot;contactChoice1&quot; name=&quot;<mark>contact</mark>&quot; value=&quot;email&quot; checked&gt;
+            &lt;label for=&quot;contactChoice1&quot;&gt;Email&lt;/label&gt;
+
+            &lt;input type=&quot;<mark>radio</mark>&quot; id=&quot;contactChoice2&quot; name=&quot;<mark>contact</mark>&quot; value=&quot;phone&quot;&gt;
+            &lt;label for=&quot;contactChoice2&quot;&gt;Phone&lt;/label&gt;
+
+            &lt;input type=&quot;<mark>radio</mark>&quot; id=&quot;contactChoice3&quot; name=&quot;<mark>contact</mark>&quot; value=&quot;mail&quot;&gt;
+            &lt;label for=&quot;contactChoice3&quot;&gt;Mail&lt;/label&gt;
+        &lt;/div&gt;
+    </code>
+</pre>
+<form id="form2">
+    <fieldset>
+        <legend>Please select your preferred contact method:</legend>
+        <div>
+            <input type="radio" id="contactChoice1"
+                   name="contact" value="email" checked>
+            <label for="contactChoice1">Email</label>
+
+            <input type="radio" id="contactChoice2"
+                   name="contact" value="phone">
+            <label for="contactChoice2">Phone</label>
+
+            <input type="radio" id="contactChoice3"
+                   name="contact" value="mail">
+            <label for="contactChoice3">Mail</label>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </fieldset>
+</form>
+
+<h2>DeopDown elements</h2>
+<pre>
+    <code>
+        &lt;<mark>select</mark> id=&quot;pet-select&quot;&gt;
+            &lt;<mark>option</mark> value=&quot;&quot;&gt;--Please choose an option--&lt;/option&gt;
+            &lt;option <mark>value</mark>=&quot;dog&quot;&gt;Dog&lt;/option&gt;
+            &lt;option value=&quot;cat&quot;&gt;Cat&lt;/option&gt;
+            &lt;option value=&quot;hamster&quot;&gt;Hamster&lt;/option&gt;
+            &lt;option value=&quot;parrot&quot;&gt;Parrot&lt;/option&gt;
+            &lt;option value=&quot;spider&quot;&gt;Spider&lt;/option&gt;
+            &lt;option value=&quot;goldfish&quot;&gt;Goldfish&lt;/option&gt;
+        &lt;/<mark>select</mark>&gt;
+    </code>
+</pre>
+<form id="form3">
+    <fieldset>
+        <legend>Please select your preferred contact method:</legend>
+        <div>
+            <label for="pet-select">Choose a pet:</label>
+
+            <select id="pet-select">
+                <option value="">--Please choose an option--</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="hamster">Hamster</option>
+                <option value="parrot">Parrot</option>
+                <option value="spider">Spider</option>
+                <option value="goldfish">Goldfish</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </fieldset>
+</form>
+</body>
+</html>

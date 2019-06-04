@@ -1,0 +1,273 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Demo Form for practicing Selenium Automation</title>
+    <meta charset="utf-8"/>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <style>
+        form {
+            width: 550px;
+            margin: 10px auto;
+        }
+
+        fieldset {
+            border-radius: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input[type=text] {
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .inline {
+            margin-left: 5px;
+            display: inline-block;
+        }
+
+        summary {
+            cursor: pointer;
+        }
+
+        details label {
+            margin-left: 50px;
+            display: block;
+        }
+
+        .checked-task {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <h1>Practice Automation Form</h1>
+</header>
+
+<div id="content" class="content" role="main">
+    <form class="form-horizontal" enctype="multipart/form-data">
+        <fieldset>
+            <!-- Form Name -->
+            <p></p>
+            <legend><strong>PERSONAL INFORMATION</strong></legend>
+            <p>
+                <!-- Text input-->
+            </p>
+            <div class="control-group">
+                <label><strong>First name:</strong><input name="firstname" type="text"></label>
+                <br/>
+                <label><strong>Last name:</strong><input name="lastname" type="text"></label>
+            </div>
+            <p>
+                <!-- Multiple Radios -->
+            </p>
+            <div class="control-group">
+                <strong>Sex</strong>
+                <input id="sex-0" name="sex" type="radio" value="Male">
+                <label for="sex-0">Male</label>
+                <input id="sex-1" name="sex" type="radio" value="Female">
+                <label class="radio" for="sex-1">Female</label>
+            </div>
+            <p>
+                <!-- Multiple Radios (inline) -->
+            </p>
+            <div class="control-group">
+                <strong>Years of Experience</strong>
+                <label class="radio inline">
+                    <input id="exp-0" name="exp" type="radio" value="1"> 1
+                </label>
+                <label class="radio inline">
+                    <input id="exp-1" name="exp" type="radio" value="2"> 2
+                </label>
+                <label class="radio inline">
+                    <input id="exp-2" name="exp" type="radio" value="3"> 3
+                </label>
+                <label class="radio inline">
+                    <input id="exp-3" name="exp" type="radio" value="4"> 4
+                </label>
+                <label class="radio inline">
+                    <input id="exp-4" name="exp" type="radio" value="5"> 5
+                </label>
+                <label class="radio inline">
+                    <input id="exp-5" name="exp" type="radio" value="6"> 6
+                </label>
+                <label class="radio inline">
+                    <input id="exp-6" name="exp" type="radio" value="7"> 7
+
+                </label>
+            </div>
+            <p><label><strong>Date:</strong>
+                <input id="datepicker" type="date"></label>
+                <!-- Multiple Checkboxes -->
+            </p>
+            <div class="control-group">
+                <strong class="control-label">Profession</strong>
+
+                <input id="profession-0" name="profession" type="checkbox" value="Manual Tester">
+                <label for="profession-0">Manual Tester&nbsp;&nbsp;&nbsp;</label>
+
+                <input id="profession-1" name="profession" type="checkbox" value="Automation Tester">
+                <label class="checkbox" for="profession-1"> Automation Tester </label>
+            </div>
+            <p>
+                <!-- File Button -->
+            </p>
+            <div class="control-group">
+                <strong><label class="control-label" for="photo">Profile Picture</label></strong>
+                <input id="photo" class="input-file" name="photo" type="file">
+            </div>
+            <p>
+                <!-- Multiple Checkboxes (inline) -->
+            </p>
+            <div class="control-group">
+                <strong>Automation Tool</strong>
+                <label><input id="tool-0" name="tool" type="checkbox" value="QTP">&nbsp; QTP</label>
+                <label><input id="tool-1" name="tool" type="checkbox" value="Selenium IDE">&nbsp; Selenium IDE</label>
+                <label><input id="tool-2" name="tool" type="checkbox" value="Selenium Webdriver">&nbsp; Selenium
+                    Webdriver</label>
+            </div>
+            <p>
+                <!-- Select Basic -->
+            </p>
+            <div class="control-group">
+                <label><strong>Continents</strong>
+                    <!--<div class="controls">-->
+                    <select id="continents" class="input-xlarge" name="continents">
+                        <option value="none"></option>
+                        <option value="asia">Asia</option>
+                        <option value="africa">Africa</option>
+                        <option value="europe">Erope</option>
+                        <option value="australia">Australia</option>
+                        <option value="samerica">South America</option>
+                        <option value="namerica">NAmerica</option>
+                        <option value="antarctica">Antarctica</option>
+                    </select>
+                    <!--</div>-->
+                </label>
+				<!--
+				<script>
+						$("#continents").change(function(){
+							$("#continents :selected").remove();
+						});
+				</script>
+				-->
+            </div>
+            <p>
+                <!-- Select Multiple -->
+            </p>
+            <div class="control-group">
+                <p><strong><label for="selenium_commands">Selenium Commands</label></strong></p>
+                <div class="controls">
+                    <select id="selenium_commands" class="input-xlarge" multiple="multiple" name="selenium_commands[]">
+                        <option value="1">Browser Commands</option>
+                        <option value="2">Navigation Commands</option>
+                        <option value="3">Switch Commands</option>
+                        <option value="4">Wait Commands</option>
+                        <option value="5">WebElement Commands</option>
+                    </select>
+                </div>
+            </div>
+            <p>
+                <!-- Button -->
+            </p>
+            <div class="control-group">
+                <div class="button">
+                    <button id="submit" class="btn btn-info" type="submit">Button</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+</div>
+<div id="tasks">
+
+    <details id="task1">
+        <summary>Практическое задание 1</summary>
+        <div>
+            <label> <input type="checkbox"> Отметить радио кнопкой пол Female для категории Sex если еще не выбрано и Male в противном случае (испольуйте метод IsSelected) </label>
+            <label> <input type="checkbox"> Установить третью радиокнопку для категории ‘Years of Exp’ (Используйте атрибут Id для выбора радио кнопки)</label>
+            <label> <input type="checkbox"> Поставить флажок в чекбоксе ‘Automation Tester’ категории ‘Profession'(Используйте значение атрибута value для выбора элемента)</label>
+            <label> <input type="checkbox"> Поставить флажок в чекбоксе ‘Selenium IDE’ категории ‘Automation Tool’ (испольуйте cssSelector)</label>
+        </div>
+    </details>
+    <details id="task2">
+        <summary>Практическое задание 2</summary>
+        <div>
+            <label> <input type="checkbox"> Найдите выподающий список ‘Continents’ (используйте идентификатор элемента)</label>
+            <label> <input type="checkbox"> Выберите опцию ‘Europe’ (используя selectByIndex)</label>
+            <label> <input type="checkbox"> Проверьте текст выбранной опции и выведите его в консоль</label>
+            <label> <input type="checkbox"> Теперь выбирите опцию ‘Africa’ (исползуя selectByVisibleText)</label>
+            <label> <input type="checkbox"> Проверьте значение выбранной опции (атрибут value) и вывидите его в консоль</label>
+            <label> <input type="checkbox"> Выберите опцию 'North America' (используя метод selectByValue)</label>
+            <label> <input type="checkbox"> Проверьте текст выбранной опции и выведите его в консоль</label>
+            <label> <input type="checkbox"> Выведите в консоли все возможные опции для выбранного выпадающего списка</label>
+            <label> <input type="checkbox"> Закройте браузер</label>
+        </div>
+    </details>
+
+    <details id="task3">
+        <summary>Практическое задание 3</summary>
+        <div>
+            <label> <input type="checkbox"> Найдите элемент списка ‘Selenium Commands’ (используйте атрибут name для
+                идентификации элемента)</label>
+            <label> <input type="checkbox"> Выберите опцию ‘Browser Commands’ (исползуя метод selectByIndex)</label>
+            <label> <input type="checkbox"> Проверьте выбранные опции (используя метод getAllSelectedOptions)</label>
+            <label> <input type="checkbox"> Отмените выбранную опцию ‘Browser Commands’ (используя метод
+                deselectByIndex)</label>
+            <label> <input type="checkbox"> Выберите опцию ‘Navigation Commands’ (используя метод
+                selectByVisibleText)</label>
+            <label> <input type="checkbox"> Проверьте все выбранные опции (используя метод
+                getAllSelectedOptions)</label>
+            <label> <input type="checkbox"> Отмените выбранную опцию Navigation Commands’ (используя метод
+                deselectByVisibleText)</label>
+            <label> <input type="checkbox"> Выберите опцию ‘Wait Commands’, 'WebElement Commands' и 'Switch Commands'
+                одновременно (используя метод selectByValue)</label>
+            <label> <input type="checkbox"> Проверьте все выбранные опции (используя метод getAllSelectedOptions) и
+                выведите их в консоль</label>
+            <label> <input type="checkbox"> Выведите в консоли все опции списка ‘Selenium Commands’ (используя метод
+                getOptions).</label>
+            <label> <input type="checkbox"> Отмените все опции (испольуя метод deselectAll)</label>
+            <label> <input type="checkbox"> Закройте браузер</label>
+        </div>
+    </details>
+
+    <script>
+        $(function () {
+            var checkboxes = $("#tasks input[type=checkbox]");
+            checkboxes.click(function () {
+                $(this).parent().toggleClass('checked-task');
+                checkboxes.each(function(i, chechbox){
+                    localStorage['checkbox'+i] = $(chechbox).hasClass('checked-task');
+                });
+            });
+
+            var details = $("details");
+            details.each(function(i, d){
+                console.log(i + " " + d.open);
+                console.log($(d).prop('id') + ': ' + localStorage.getItem($(d).prop('id')));
+                d.open = localStorage.getItem($(d).prop('id')) == 'true';
+            });
+
+            checkboxes.each(function(i, chechbox){
+                if(localStorage.getItem('checkbox'+i) == 'true' ) {
+                    $(chechbox).prop('class', 'checked-task');
+                }
+            });
+
+            details.click(function (d) {
+                var id = $(this).prop('id');
+                console.log(id + ' ' + !this.open);
+                localStorage[id] = !this.open;
+            });
+        });
+    </script>
+</div>
+</body>
+
+</html>

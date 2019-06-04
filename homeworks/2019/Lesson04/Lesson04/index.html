@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1 {
+            margin: 10px;
+        }
+
+        /*
+        th {
+            background-color: darkcyan;
+        }
+*/
+
+        
+        table {
+            border-spacing: 0;
+            width: 100%;
+        }
+
+        thead {
+            background-color: aqua;
+        }
+
+        thead>tr:hover {
+            background-color: aqua;
+        }
+
+
+        tbody>tr:nth-child(even) {
+            background-color: lightgrey;
+        }
+
+
+        tbody>tr:hover {
+            background-color: black;
+        }
+
+
+        tr:hover {
+            background-color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1 style="margin: 20px">Table</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+            </tr>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+            </tr>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+            </tr>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+            </tr>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+            </tr>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+            </tr>
+        </tbody>
+
+
+    </table>
+
+<!--
+    <script>
+        var tableRows = document.getElementsByTagName('tr');
+        console.log(tableRows);
+        for (let i = 0; i < tableRows.length; i++) {
+            tableRows[i].onmouseover = () => {
+                tableRows[i].style.backgroundColor = 'darkgray';
+            };
+            tableRows[i].onmouseleave = () => {
+                tableRows[i].style.backgroundColor = '';
+
+            }
+        }
+    </script>
+-->
+</body></html>

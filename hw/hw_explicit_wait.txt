@@ -1,6 +1,0 @@
-1. Открыть страницу http://www.seleniumeasy.com/test/dynamic-data-loading-demo.html
-2. Нажать на кнопку "Get New User"
-3. Проверить появление изображения http://seleniumeasy.com/test/img/loader-image.gif в 
-   div элементе с id='loading'
-4. Дождаться загрузки данных пользователя
-5. Вывести First Name, Last Name и значение атрибута src загруженного изображения

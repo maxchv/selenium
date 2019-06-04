@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+		
+		*{
+			margin:0;
+			padding:0;
+			font-family: "arial";
+		}
+		
+        .container {
+            width: 80%;
+			margin:50px auto ;
+			text-align:center;
+        }
+		
+		form{
+			display: inline-block;
+			margin: 20px;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+		}
+		
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="http://localhost:8000/" method="get">
+			<p>Get form:</p>
+            <input type="text" placeholder="Login" name="login">
+            <br>
+            <input type="password" placeholder="Password" name="password">
+            <br>
+            <input type="submit">
+        </form>
+
+        <form action="http://localhost:8000/" method="post">
+			<p>Post form:</p>
+			<input type="text" placeholder="Login" name="login">
+            <br>
+            <input type="password" placeholder="Password" name="password">
+            <br>
+            <input type="submit">
+        </form>
+
+    </div>
+
+</body></html>

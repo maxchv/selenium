@@ -1,0 +1,19 @@
+Задание 1
+
+1. Открыть hw_alert.html
+2. В первый prompt ввести 10
+3. Во втротой prompt ввести 5
+4. Проверить, что появилась таблица размером 5 колонок и 10 строк
+
+Задание 2
+
+1. Открыть сайт http://test1.absofttrainings.com/javascript-alert-confirm-prompt-boxes/
+2. Кликнуть по кнопке "Dislplay Alert Box"
+3. Переключиться на alert, кликнуть по кнопке OK
+4. Проверить наличие текста "You pressed OK on Alert Box." в элементе с id="msg"
+5. Кликнуть по кнопке "Dispaley Confirm Box"
+6. В появившемся confirm кликнуть по кнопке Отмена
+7. Проверить наличие текста "You pressed Cancel on Confirm Box." в элементе с id="msg"
+8. Кликнуть по кнопке "Display Prompt Box"
+9. В появившемся prompt ввести тексте "Selenium"
+10.Проверить наличие текста "Hello Selenium! How are you today?" в элементе с id="msg"
